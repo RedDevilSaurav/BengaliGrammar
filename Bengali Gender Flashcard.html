@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipping Flashcards Grid</title>
+    <style>
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            background: linear-gradient(to right, #fefcea, #f1daff);
+            padding: 30px;
+        }
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            width: 160px;
+            height: 100px;
+            perspective: 1000px;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .card-front {
+            background-color: #ffcc80;
+            color: #000;
+        }
+        .card-back {
+            background-color: #90caf9;
+            color: #000;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+<div class="grid">
+<div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">হংস</div>
+                <div class="card-back">হংসী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নানা</div>
+                <div class="card-back">নানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বানর</div>
+                <div class="card-back">বানরী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কৃপণ</div>
+                <div class="card-back">কৃপণা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">রাজক</div>
+                <div class="card-back">রজকিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কোকিল</div>
+                <div class="card-back">কোকিলা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নদ</div>
+                <div class="card-back">নদী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">শিব</div>
+                <div class="card-back">শিবানী</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ঠাকুর</div>
+                <div class="card-back">ঠাকুরানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">প্রবীণ</div>
+                <div class="card-back">প্রবীণা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ভীত</div>
+                <div class="card-back">ভীতা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">শয়তান</div>
+                <div class="card-back">শয়তানী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">শংকর</div>
+                <div class="card-back">শংকরী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নারায়ণ</div>
+                <div class="card-back">নারায়ণী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পিতামহ</div>
+                <div class="card-back">পিতামহী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নর্তক</div>
+                <div class="card-back">নর্তকী</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পালক</div>
+                <div class="card-back">পালিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মজুর</div>
+                <div class="card-back">মজুরানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ময়ূর</div>
+                <div class="card-back">ময়ূরী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">দ্বিতীয়</div>
+                <div class="card-back">দ্বিতীয়া</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বাঘ</div>
+                <div class="card-back">বাঘিনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">হরিণ</div>
+                <div class="card-back">হরিণী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পাগল</div>
+                <div class="card-back">পাগলিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বিদেশি</div>
+                <div class="card-back">বিদেশিনী</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কিন্নর</div>
+                <div class="card-back">কিন্নরী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কৃশ</div>
+                <div class="card-back">কৃশা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নট</div>
+                <div class="card-back">নটী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">শিষ্য</div>
+                <div class="card-back">শিষ্যা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কিশোর</div>
+                <div class="card-back">কিশোরী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">খোকা</div>
+                <div class="card-back">খুকি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মহাশয়</div>
+                <div class="card-back">মহাশয়া</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কপোত</div>
+                <div class="card-back">কপোতী</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">দুঃখী</div>
+                <div class="card-back">দুঃখীনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পরিচালক</div>
+                <div class="card-back">পরিচালিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">প্রথম</div>
+                <div class="card-back">প্ৰথমা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ভিখারি</div>
+                <div class="card-back">ভিখারিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">গয়লা</div>
+                <div class="card-back">গয়লানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">অজ</div>
+                <div class="card-back">অজা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">অনাথ</div>
+                <div class="card-back">অনাথা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">জ্যেষ্ঠ</div>
+                <div class="card-back">জ্যেষ্ঠা</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ভব</div>
+                <div class="card-back">ভবানী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মাতুল</div>
+                <div class="card-back">মাতুলানী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ডোম</div>
+                <div class="card-back">ডোমনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">দাস</div>
+                <div class="card-back">দাসী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মাস্টার</div>
+                <div class="card-back">মাস্টারনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চাকর</div>
+                <div class="card-back">চাকরানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পদ্ম</div>
+                <div class="card-back">পদ্মিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পাত্র</div>
+                <div class="card-back">পাত্রী</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ব্রাক্ষ্মণ</div>
+                <div class="card-back">ব্রাহ্মণী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">দূত</div>
+                <div class="card-back">দূতী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">তরুণ</div>
+                <div class="card-back">তরুণী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পাঠক</div>
+                <div class="card-back">পাঠিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কাঙাল</div>
+                <div class="card-back">কাঙালিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মাননীয়</div>
+                <div class="card-back">মাননীয়া</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কল্যাণীয়</div>
+                <div class="card-back">কল্যাণীয়া</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চাতক</div>
+                <div class="card-back">চাতকী</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কুমার</div>
+                <div class="card-back">কুমারী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সাপ</div>
+                <div class="card-back">সাপিনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পূজনীয়</div>
+                <div class="card-back">পূজনীয়া</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সম্পাদক</div>
+                <div class="card-back">সম্পাদিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">লেখক</div>
+                <div class="card-back">লেখিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">প্রিয়</div>
+                <div class="card-back">প্রিয়া</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বৃদ্ধ</div>
+                <div class="card-back">বৃদ্ধা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">শিক্ষক</div>
+                <div class="card-back">শিক্ষিকা</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মৃত</div>
+                <div class="card-back">মৃতা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মামা</div>
+                <div class="card-back">মামি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">রাক্ষস</div>
+                <div class="card-back">রাক্ষসী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ধোপা</div>
+                <div class="card-back">ধোপানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সভ্য</div>
+                <div class="card-back">সভ্যা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">রাঁধুনে</div>
+                <div class="card-back">রাঁধুনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চালক</div>
+                <div class="card-back">চালিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নবীন</div>
+                <div class="card-back">নবীনা</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সাধক</div>
+                <div class="card-back">সাধিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">তাপস</div>
+                <div class="card-back">তাপসী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সুন্দর</div>
+                <div class="card-back">সুন্দরী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পণ্ডিত</div>
+                <div class="card-back">পণ্ডিতানী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নাপিত</div>
+                <div class="card-back">নাপিতানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চঞ্চল</div>
+                <div class="card-back">চঞ্চলা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চাচা</div>
+                <div class="card-back">চাচি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চপল</div>
+                <div class="card-back">চপলা</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">অসহায়</div>
+                <div class="card-back">অসহায়া</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ভেড়া</div>
+                <div class="card-back">ভেড়ি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মানব</div>
+                <div class="card-back">মানবী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ঘোষক</div>
+                <div class="card-back">ঘোষিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কান্ত</div>
+                <div class="card-back">কান্তা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বাহক</div>
+                <div class="card-back">বাহিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নাগ</div>
+                <div class="card-back">নাগিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ডাক</div>
+                <div class="card-back">ডাকিনী</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বালক</div>
+                <div class="card-back">বালিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">আর্য</div>
+                <div class="card-back">আর্যা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পাগল</div>
+                <div class="card-back">পাগলি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মোরগ</div>
+                <div class="card-back">মুরগি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বৈষ্ণব</div>
+                <div class="card-back">বৈষ্ণবী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সিংহ</div>
+                <div class="card-back">সিংহী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">জেলে</div>
+                <div class="card-back">জেলেনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নায়ক</div>
+                <div class="card-back">নায়িকা</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">বেদে</div>
+                <div class="card-back">বেদেনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">মালী</div>
+                <div class="card-back">মালিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ছাত্র</div>
+                <div class="card-back">ছাত্রী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">রুদ্র</div>
+                <div class="card-back">রুদ্রাণী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">নিপুণ</div>
+                <div class="card-back">নিপুণা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">হস্তি</div>
+                <div class="card-back">হস্তিনী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কাকা</div>
+                <div class="card-back">কাকি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">পাচক</div>
+                <div class="card-back">পাচিকা</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সরল</div>
+                <div class="card-back">সরলা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কৃষাণ</div>
+                <div class="card-back">কৃষাণী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চৌধুরি</div>
+                <div class="card-back">চৌধুরানি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">ষোড়শ</div>
+                <div class="card-back">ষোড়শী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কামার</div>
+                <div class="card-back">কামারনি</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">শ্রেষ্ঠ</div>
+                <div class="card-back">শ্রেষ্ঠা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">গ্রাহক</div>
+                <div class="card-back">গ্রাহিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">অধ্যাপক</div>
+                <div class="card-back">অধ্যাপিকা</div>
+            </div>
+        </div>
+        </div><div class="row">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">চতুর</div>
+                <div class="card-back">চতুরা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">গায়ক</div>
+                <div class="card-back">গায়িকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">সেবক</div>
+                <div class="card-back">সেবিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">দেব</div>
+                <div class="card-back">দেবী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">কিংকর</div>
+                <div class="card-back">কিংকরী</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">প্রাচীন</div>
+                <div class="card-back">প্রাচীনা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">প্রচারক</div>
+                <div class="card-back">প্রচারিকা</div>
+            </div>
+        </div>
+        
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">গোপ</div>
+                <div class="card-back">গোপী</div>
+            </div>
+        </div>
+        </div>
+</div>
+</body>
+</html>
